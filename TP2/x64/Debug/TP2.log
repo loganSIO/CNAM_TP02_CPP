@@ -1,0 +1,3 @@
+﻿  main.cpp
+main.obj : error LNK2019: symbole externe non résolu "public: __cdecl Rectangle::Rectangle(int,int)" (??0Rectangle@@QEAA@HH@Z) référencé dans la fonction main
+D:\CNAM\Sem1\CPP\TP2\x64\Debug\TP2.exe : fatal error LNK1120: 1 externes non résolus
