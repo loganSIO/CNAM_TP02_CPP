@@ -1,3 +1,11 @@
-﻿  main.cpp
-main.obj : error LNK2019: symbole externe non résolu "public: __cdecl Rectangle::Rectangle(int,int)" (??0Rectangle@@QEAA@HH@Z) référencé dans la fonction main
-D:\CNAM\Sem1\CPP\TP2\x64\Debug\TP2.exe : fatal error LNK1120: 1 externes non résolus
+﻿  cercle.cpp
+D:\CNAM\Sem1\CPP\TP2\TP2\cercle.cpp(10,1): error C2512: 'Point' : aucun constructeur par défaut approprié disponible
+D:\CNAM\Sem1\CPP\TP2\TP2\point.h(4,8): message : voir la déclaration de 'Point'
+D:\CNAM\Sem1\CPP\TP2\TP2\cercle.cpp(13,19): warning C4244: 'return' : conversion de 'double' en 'const float', perte possible de données
+D:\CNAM\Sem1\CPP\TP2\TP2\cercle.cpp(17,31): warning C4244: 'return' : conversion de 'double' en 'const float', perte possible de données
+  main.cpp
+  point.cpp
+  rectangle.cpp
+D:\CNAM\Sem1\CPP\TP2\TP2\rectangle.cpp(7,1): error C2512: 'Point' : aucun constructeur par défaut approprié disponible
+D:\CNAM\Sem1\CPP\TP2\TP2\point.h(4,8): message : voir la déclaration de 'Point'
+  Génération de code en cours...
