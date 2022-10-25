@@ -6,7 +6,7 @@
 class Cercle {
 	public:
 
-		Cercle(const int diametre);
+		Cercle(const int diametre, const Point centreCercle);
 
 		// Getters
 		inline const int getDiametre() {
@@ -28,6 +28,7 @@ class Cercle {
 		const float Perimetre();
 		const float Surface();
 		const bool EstSurCercle(const Point p);
+		const bool EstDansCercle(const Point p);
 
 	private:
 		// Attributs

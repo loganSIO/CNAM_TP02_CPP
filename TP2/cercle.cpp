@@ -5,12 +5,12 @@
 
 #include "cercle.h"
 
-Cercle::Cercle(const int diametre)
-	: diametre(diametre)
+Cercle::Cercle(const int diametre, const Point centreCercle)
+	: diametre(diametre), centreCercle(centreCercle)
 {}
 
 const float Cercle::Perimetre() {
-	return (2 * M_PI * (diametre / 2));
+	return (M_PI * diametre);
 }
 
 const float Cercle::Surface() {
@@ -19,4 +19,8 @@ const float Cercle::Surface() {
 
 const bool Cercle::EstSurCercle(Point p) {
 	return sqrt(pow(p.x - centreCercle.x, 2) + pow(p.y - centreCercle.y, 2)) ==  diametre / 2;
+}
+
+const bool Cercle::EstDansCercle(Point p) {
+	return sqrt(pow(p.x - centreCercle.x, 2) + pow(p.y - centreCercle.y, 2)) < diametre / 2;
 }

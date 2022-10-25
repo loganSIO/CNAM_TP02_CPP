@@ -1,2 +1,3 @@
-#include "point.h"
+#include <iostream>
 
+#include "point.h"
