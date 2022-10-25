@@ -9,42 +9,42 @@ class Rectangle {
 		Rectangle(const int longueur, const int largeur);
 
 		// Destructeur
-		//~Rectangle();
+		~Rectangle() = default;
 
 		// Getters
-		inline const int getLongueur() {
-			return longueur;
+		inline int get_longueur() const {
+			return _longueur;
 		}
-		inline const int getLargeur() {
-			return largeur;
+		inline int get_largeur() const {
+			return _largeur;
 		}
-		inline const Point getTopLeftCorner() {
-			return topLeftCorner;
+		inline Point get_coin_superieur_gauche() const {
+			return _coinSuperieurGauche;
 		}
 
 		// Setters
-		inline void setLongueur(const int longueuR) {
-			longueur = longueuR;
+		inline void set_longueur(const int longueur) {
+			_longueur = longueur;
 		}
-		inline void setLargeur(const int largeuR) {
-			largeur = largeuR;
+		inline void set_largeur(const int largeur) {
+			_largeur = largeur;
 		}
-		inline void setTopLeftCorner(const Point &topLeftCorneR) {
-			topLeftCorner = topLeftCorneR;
+		inline void set_coin_superieur_gauche(const Point& coinSuperieurGauche) {
+			_coinSuperieurGauche = coinSuperieurGauche;
 		}
 
 		// Méthodes
-		inline const void Afficher();
-		const int Perimetre();
-		const int Surface();
-		const bool PlusGrandPerimetre(Rectangle r2);
-		const bool PlusGrandeSurface(Rectangle r2);
+		void afficher() const;
+		int perimetre() const;
+		int surface() const;
+		bool plus_grand_perimetre(Rectangle r2) const;
+		bool plus_grande_surface(Rectangle r2) const;
 
 	private:
 		// Attributs
-		int longueur;
-		int largeur;
-		Point topLeftCorner;
+		int _longueur;
+		int _largeur;
+		Point _coinSuperieurGauche;
 };
 
 #endif

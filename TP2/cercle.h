@@ -6,34 +6,39 @@
 class Cercle {
 	public:
 
+		// Constructeur
 		Cercle(const int diametre, const Point centreCercle);
 
+		// Destructeur
+		~Cercle() = default;
+
 		// Getters
-		inline const int getDiametre() {
-			return diametre;
+		inline int get_diametre() const {
+			return _diametre;
 		}
-		inline const Point getCentreCercle() {
-			return centreCercle;
+		inline Point get_centre_cercle() const {
+			return _centreCercle;
 		}
 
 		// Setters
-		inline void setDiametre(const int diametrE) {
-			diametre = diametrE;
+		inline void set_diametre(const int diametre) {
+			_diametre = diametre;
 		}
-		inline void setCentreCercle(const Point &centreCerclE) {
-			centreCercle = centreCerclE;
+		inline void set_centre_cercle(const Point& centreCercle) {
+			_centreCercle = centreCercle;
 		}
 
 		// Méthodes
-		const float Perimetre();
-		const float Surface();
-		const bool EstSurCercle(const Point p);
-		const bool EstDansCercle(const Point p);
+		void afficher() const;
+		float perimetre() const;
+		float surface() const;
+		bool est_sur_cercle(const Point p) const;
+		bool est_dans_cercle(const Point p) const;
 
 	private:
 		// Attributs
-		int diametre;
-		Point centreCercle;
+		int _diametre;
+		Point _centreCercle;
 };
 
 #endif

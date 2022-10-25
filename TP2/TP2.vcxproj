@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="cercle.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="point.cpp" />
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="triangle.cpp" />
   </ItemGroup>

@@ -3,26 +3,34 @@
 #include "rectangle.h"
 
 Rectangle::Rectangle(const int longueur, const int largeur)
-	: longueur(longueur), largeur(largeur)
+	: _longueur(longueur), _largeur(largeur)
 {
 }
 
-const int Rectangle::Perimetre() 
-{
-	return (longueur + largeur) * 2;
+Rectangle r2(100, 200);
+
+void Rectangle::afficher() const {
+	std::cout << "-- Rectangle --" << std::endl
+		<< "Longeur : " << _longueur << std::endl
+		<< "Largeur : " << _largeur << std::endl
+		<< "Surface : " << surface() << std::endl
+		<< "Perimetre : " << perimetre() << std::endl
+		<< "Comparaison perimetre : " << plus_grand_perimetre(r2) << std::endl
+		<< "Comparaison surface : " << plus_grande_surface(r2) << std::endl;
 }
 
-const int Rectangle::Surface()
-{
-	return longueur * largeur;
+int Rectangle::perimetre() const {
+	return (_longueur + _largeur) * 2;
 }
 
-const bool Rectangle::PlusGrandPerimetre(Rectangle r2)
-{
-	return r2.Perimetre() > Perimetre();
+int Rectangle::surface() const {
+	return _longueur * _largeur;
 }
 
-const bool Rectangle::PlusGrandeSurface(Rectangle r2)
-{
-	return r2.Surface() > Surface();
+bool Rectangle::plus_grand_perimetre(Rectangle r2) const {
+	return r2.perimetre() > perimetre();
+}
+
+bool Rectangle::plus_grande_surface(Rectangle r2) const {
+	return r2.surface() > surface();
 }
